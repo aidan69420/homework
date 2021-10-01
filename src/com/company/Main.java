@@ -6,7 +6,8 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         for(int i = 0; i < 5; i++){
-            System.out.println("Введите температуру на улице, а ваш возраст я попробую угадать" + "\n" + result(generateRandomAge(), new Scanner(System.in).nextInt()));
+            System.out.println("Введите температуру на улице, а ваш возраст я попробую угадать");
+            System.out.println(result(generateRandomAge(), new Scanner(System.in).nextInt()));
         }
         
     }
@@ -20,9 +21,9 @@ public class Main {
         else
             return "Оставайтесь дома!";
     }
-            public static int generateRandomAge(){
-                Random r = new Random;
-                return r.nextInt((100-0) + 1);
-            }
+    public static int generateRandomAge(){
+        Random r = new Random();
+        return r.nextInt((100-0) + 1);
+    }
     
 }
