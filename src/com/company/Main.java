@@ -1,16 +1,12 @@
 package com.company;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
         for(int i = 0; i < 5; i++){
-            //Сами вводите
-            System.out.println("Введите свой возраст и температуру на улице");
-            Scanner sc = new Scanner(System.in);
-            int age = sc.nextInt();
-            int temp = sc.nextInt();
-            System.out.println(result(age, temp));
+            System.out.println("Введите температуру на улице, а ваш возраст я попробую угадать" + "\n" + result(generateRandomAge(), new Scanner(System.in).nextInt()));
         }
         
     }
@@ -24,5 +20,9 @@ public class Main {
         else
             return "Оставайтесь дома!";
     }
+            public static int generateRandomAge(){
+                Random r = new Random;
+                return r.nextInt((100-0) + 1);
+            }
     
 }
